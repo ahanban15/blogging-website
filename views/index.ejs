@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Node Save Data to Mysql Database using Express Js Example</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form action="/blog_entry" method="POST">
+        <div class="mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            placeholder="Enter the blog title: "
+            name="title"
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            name="email"
+            placeholder="Enter the blogger Email-ID: "
+          />
+        </div>
+        <div class="mb-2">
+          <input
+            type="text"
+            class="form-control"
+            id="blogcontent"
+            name="blogcontent"
+            placeholder="Type in your blog: "
+          />
+        </div>
+        <button type="submit" class="btn btn-dark">Store</button>
+      </form>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogger</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/88ebba7a68.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+    <nav class="navbar bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJO7AOk3-943tK0Ifplx5tpkAmjKIn0cXcxg&usqp=CAU" 
+            alt="Logo" width="150" height="40" class="d-inline-block align-text-top">
+          </a>
+          
+        <form class="d-flex" role="search">
+            <button class="btn" type="submit"><i class="fa-solid fa-bars"></i> Other apps </button>
+            <button class="btn" type="submit"><i class="fa-solid fa-user"></i> Profile </button>
+        </form>
+        </div>
+      </nav>
+
+      <div class="grid-container">
+        <div class="grid-item-1">
+            <br>
+            <div class="icons">
+                <i class="fa-solid fa-pencil"></i>
+                <i class="fa-solid fa-rotate-left"></i>
+                <i class="fa-solid fa-rotate-right"></i>
+                <i class="fa-solid fa-a"></i>
+                <i class="fa-solid fa-maximize"></i>
+                <i class="fa-solid fa-text-height"></i>
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Paragraph
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>                    
+                  </div>
+                  <i class="fa-solid fa-bold"></i>
+                  <i class="fa-solid fa-italic"></i>
+                  <i class="fa-solid fa-underline"></i>
+                  <i class="fa-solid fa-strikethrough"></i>
+                  <i class="fa-sharp fa-solid fa-palette"></i>
+                  <i class="fa-solid fa-paintbrush"></i>
+                  <i class="fa-solid fa-link"></i>
+                  <i class="fa-solid fa-image"></i>
+                  <i class="fa-solid fa-video"></i>
+                  <i class="fa-solid fa-face-smile"></i>
+                  <i class="fa-solid fa-align-left"></i>
+                  <i class="fa-solid fa-align-center"></i>
+                  <i class="fa-solid fa-align-right"></i>
+                  <i class="fa-solid fa-align-justify"></i>
+                  <i class="fa-solid fa-list"></i>
+                  <i class="fa-solid fa-quote-left"></i>
+                  <i class="fa-solid fa-ruler-horizontal"></i>
+                  <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <form action="/blog_entry" method="POST">
+              <hr>
+                <label for="title">Title</label><br>
+                <input type="text" class="form-control" id="title" placeholder="Enter the blog title: " name="title"/>
+                <input type="text" class="form-control" id="blogcontent" name="blogcontent" placeholder="Type in your blog: "/>
+                <input type="text" class="form-control" id="email" name="email" placeholder="Enter the blogger Email-ID: "/>
+                <button type="submit" class="btn" style="background-color: orange; color: black;">Upload blog</button>
+            </form>
+        </div>
+
+        <div class="grid-item-2">
+                <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Preview </button>
+                <button class="btn" type="submit" style="background-color: orange; color: black;"><a href = "/view_blog"> Read Blogs </a></button>
+                <hr>
+                <ul>
+                    <li><i class="fa-solid fa-square-plus"></i> Post </li>
+                    <li><i class="fa-solid fa-signal"></i> Stats </li>
+                    <li><i class="fa-solid fa-message"></i> Comments </li>
+                    <li><i class="fa-solid fa-sack-dollar"></i> Earnings </li>
+                    <li><i class="fa-regular fa-file-lines"></i> Pages </li>
+                    <li><i class="fa-solid fa-box"></i> Box </li>
+                    <li><i class="fa-solid fa-paint-roller"></i> Theme </li>
+                    <li><i class="fa-solid fa-gear"></i> Settings </li>
+                    <li><i class="fa-solid fa-book-open"></i> Reading List </li>
+                    <li><i class="fa-solid fa-eye"></i> View </li>
+                    <li><i class="fa-solid fa-calendar"></i> Date </li>
+                    <li><i class="fa-solid fa-location-dot"></i> Location </li>
+                </ul>
+        </div>
+    </div>
+</body>
+</html>
